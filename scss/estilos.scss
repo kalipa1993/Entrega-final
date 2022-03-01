@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+$color:darkblue;
+@mixin colores($color1,$color2){
+	color:$color1;
+	background-color: $color2;
+}
+
+.card-individual {
+	font-size: 10px;
+	font-family: 'Courier New', Courier, monospace;
+	border: radius 5%;
+	border: solid 2px ;
+	color: darkblue;
+	background-color: black;
+	height: 200px;
+	width: 200px;
+
+}
+.card-body {
+	font-size:large;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bolder;
+	border-radius: 5%;
+	border: solid 5px black;
+	color:red;
+	background-color:black;
+	height: 250px;
+	width: 75%;
+}
+
+.card-body{
+	@extend.card-individual;
+    @include colores( darkblue,rgb(175, 171, 171));
+	margin-left: auto ;
+	margin-right: auto;
+}
+
+.card-individual{
+	@extend.car
+}
+
+/*Reset default*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*Cotenedor*/
+
+.contenedor {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: 'header header header' 'nav nav nav' 'contenido contenido contenido' 'footer footer footer';
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+
+/*Header*/
+
+header {
+	grid-area: header;
+	display: flex;
+	justify-content: center;
+}
+
+.logo img {
+	width: 300px;
+	height: 300px;
+}
+
+/*Nav*/
+
+nav {
+	grid-area: nav;
+	background-color: $color;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+.nav-bar li {
+	padding: 10px;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+.nav-bar a:hover {
+	color: blue;
+}
+.nav-bar i {
+	display: none;
+}
+
+input[type='search'] {
+	padding: 10px;
+	transition: 0.8s;
+	border: none;
+	border-bottom: 1px solid black;
+}
+
+input[type='search']:focus {
+	color: black;
+	outline: none;
+}
+
+/**Contacto*/
+
+.contenido-formulario {
+	margin: 0 auto;
+	width: 1000px;
+	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/*Section*/
+
+section {
+	grid-area: contenido;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+}
+.form {
+	font-family: cursive;
+	color:red;
+	background-color: black;
+}
+article {
+	display: flex;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	align-items: center;
+	flex-direction: column;
+}
+article:hover {
+	box-shadow: 0px 5px 5px black;
+}
+img {
+	width: 35%;
+}
+
+.btn {
+	margin: auto;
+	display: block;
+	margin-bottom: 10px;
+	background-color: black;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	padding: 10px;
+}
+
+span {
+  background-color: yellow;
+  font-size: 33px;
+}
+
+
+/*Footer*/
+
+footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	background-color: gray;
+}
+/*
+.rs {
+	grid-area: rs;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	background-color: gray;
+}
+.redes {
+	margin: 10px;
+	padding: 10px;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+	color: white;
+}
+
+.copyright {
+	display: flex;
+	justify-content: right;
+}
+
+.webpay {
+	width: 20%;
+}	
+.boton-form:hover {
+	color: blue;
+	background-color: yellow;
+	
+}
+.boton-form {
+	font-weight: bold;
+}
+.copy {
+	display: flex;
+	justify-content: center;
+	color: red;
+	font-weight: bolder;
+	
+}
+*/
+
+.copi {
+	color:red;
+	font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+	.logo img {
+		width: 100%;
+		height: 160px;
+	}
+	section {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	section.contenido-formulario {
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	section iframe {
+		display: none;
+	}
+
+	.contenedor {
+		display: block;
+	}
+}
