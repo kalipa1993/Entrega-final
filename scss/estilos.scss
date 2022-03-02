@@ -1,21 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*font-family: 'Roboto', sans-serif;*/
-$color:darkblue;
-@mixin colores($color1,$color2){
-	color:$color1;
-	background-color: $color2;
-}
+$colores:(
+	color1:darkblue,
+	color2:black,
+	color3: red,
+)
+;
+
 
 .card-individual {
 	font-size: 10px;
 	font-family: 'Courier New', Courier, monospace;
-	border: radius 5%;
+	border: radius 15px;
 	border: solid 2px ;
-	color: darkblue;
+	color: map-get($colores,color1);
 	background-color: black;
-	height: 200px;
-	width: 200px;
+	height: auto;
+	width: 100%;
+	
 
 }
 .card-body {
@@ -38,8 +41,17 @@ $color:darkblue;
 }
 
 .card-individual{
-	@extend.car
+	@extend.card-individual;
+	@include colores(darkblue,rgb(175,171,171) );
+	justify-content: center;
+	text-align: center;
 }
+.ceo{
+	width: 100%;
+	height: 100%
+	
+}
+
 
 /*Reset default*/
 * {

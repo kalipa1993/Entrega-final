@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
-.card-individual, .card-body {
+.card-body, .card-individual {
   font-size: 10px;
   font-family: 'Courier New', Courier, monospace;
-  border: radius 5%;
+  border: radius 15px;
   border: solid 2px;
   color: darkblue;
   background-color: black;
-  height: 200px;
-  width: 200px; }
+  height: auto;
+  width: 100%; }
 
 .card-body {
   font-size: large;
@@ -26,6 +26,16 @@
   background-color: #afabab;
   margin-left: auto;
   margin-right: auto; }
+
+.card-body, .card-individual {
+  color: darkblue;
+  background-color: #afabab;
+  justify-content: center;
+  text-align: center; }
+
+.ceo {
+  width: 100%;
+  height: 100%; }
 
 /*Reset default*/
 * {
