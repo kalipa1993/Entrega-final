@@ -1,42 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*font-family: 'Roboto', sans-serif;*/
-.card-body, .card-individual {
-  font-size: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  border: radius 15px;
-  border: solid 2px;
-  color: darkblue;
-  background-color: black;
-  height: auto;
-  width: 100%; }
-
-.card-body {
-  font-size: large;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-  border-radius: 5%;
-  border: solid 5px black;
-  color: red;
-  background-color: black;
-  height: 250px;
-  width: 75%; }
-
-.card-body {
-  color: darkblue;
-  background-color: #afabab;
-  margin-left: auto;
-  margin-right: auto; }
-
-.card-body, .card-individual {
-  color: darkblue;
-  background-color: #afabab;
-  justify-content: center;
-  text-align: center; }
-
 .ceo {
   width: 100%;
   height: 100%; }
-
 
 /*Reset default*/
 * {
@@ -68,8 +34,7 @@ header {
 
 /*Nav*/
 nav {
-  grid-area: nav;
-  background-color: darkblue; }
+  grid-area: nav; }
 
 .nav-bar {
   display: flex;
@@ -157,47 +122,41 @@ footer {
   padding: 20px;
   background-color: gray; }
 
-/*
 .rs {
-	grid-area: rs;
-	display: flex;
-	justify-content: center;
-	padding: 20px;
-	background-color: gray;
-}
+  grid-area: rs;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: gray; }
+
 .redes {
-	margin: 10px;
-	padding: 10px;
-	background-color: black;
-	border: none;
-	border-radius: 5px;
-	color: white;
-}
+  margin: 10px;
+  padding: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white; }
 
 .copyright {
-	display: flex;
-	justify-content: right;
-}
+  display: flex;
+  justify-content: right; }
 
 .webpay {
-	width: 20%;
-}	
+  width: 20%; }
+
 .boton-form:hover {
-	color: blue;
-	background-color: yellow;
-	
-}
+  color: blue;
+  background-color: yellow; }
+
 .boton-form {
-	font-weight: bold;
-}
+  font-weight: bold; }
+
 .copy {
-	display: flex;
-	justify-content: center;
-	color: red;
-	font-weight: bolder;
-	
-}
-*/
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-weight: bolder; }
+
 .copi {
   color: red;
   font-weight: bold; }
