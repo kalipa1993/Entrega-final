@@ -91,7 +91,9 @@ input[type='search']:focus {
   width: 1000px;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  background-color: yellow;
+  border-radius: 5px; }
 
 /*Section*/
 section {
@@ -121,19 +123,31 @@ article:hover {
 img {
   width: 35%; }
 
-.btn {
+.botn {
   margin: auto;
   display: block;
   margin-bottom: 10px;
-  background-color: black;
-  border-radius: 3px;
+  background-color: #4da80a;
+  border-radius: 5px;
   border: none;
   color: white;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 14px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: center;
+  text-transform: uppercase; }
 
 span {
+  color: red;
   background-color: yellow;
   font-size: 33px; }
+
+.item2 {
+  justify-content: center;
+  text-align: center; }
 
 /*Footer*/
 footer {
